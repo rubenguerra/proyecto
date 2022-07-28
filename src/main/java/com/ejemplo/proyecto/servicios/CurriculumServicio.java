@@ -19,18 +19,9 @@ public class CurriculumServicio implements ICurriculumServicio {
     }
 
     @Override
-    public void crearCurriculum(Curriculum curriculum) {
+    public void actualizarCurriculum(Curriculum curriculum) {
         curriculumRepositorio.save(curriculum);
 
     }
 
-    @Override
-    public void borrarCurriculum(Long id) {
-        curriculumRepositorio.deleteById(id);
-    }
-
-    @Override
-    public Curriculum buscarCurriculum(Long id) {
-        return curriculumRepositorio.findById(id).orElse(null);
-    }
 }

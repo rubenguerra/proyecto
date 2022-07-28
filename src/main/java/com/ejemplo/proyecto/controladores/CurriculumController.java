@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/apiDatos/")
+@RequestMapping("/apiDatos")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CurriculumController {
 
@@ -17,7 +17,7 @@ public class CurriculumController {
 
     @PostMapping("/curriculum")
     public void agregarCurriculum(@RequestBody Curriculum curriculum){
-        curriculumServicio.crearCurriculum(curriculum);
+        curriculumServicio.actualizarCurriculum(curriculum);
     }
 
     @GetMapping("/datos")
@@ -26,8 +26,5 @@ public class CurriculumController {
         return curriculumServicio.verCurriculum();
     }
 
-    @DeleteMapping("/borrar-datos/{id}")
-    public void borrarCurriculum(@PathVariable Long id){
-        curriculumServicio.borrarCurriculum(id);
-    }
+
 }

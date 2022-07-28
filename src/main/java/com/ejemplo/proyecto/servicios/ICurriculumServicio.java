@@ -9,9 +9,6 @@ public interface ICurriculumServicio {
     //En esta interfaz hacemos declaración de métodos que se van a implentar.
     public List<Curriculum> verCurriculum();
 
-    public void crearCurriculum(Curriculum curriculum);
+    public void actualizarCurriculum(Curriculum curriculum);
 
-    public void borrarCurriculum(Long id);
-
-    public Curriculum buscarCurriculum(Long id);
 }
