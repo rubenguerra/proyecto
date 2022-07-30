@@ -15,7 +15,7 @@ public class CurriculumController {
     @Autowired
     private ICurriculumServicio curriculumServicio;
 
-    @PostMapping("/curriculum")
+    @PutMapping("/curriculum")
     public void agregarCurriculum(@RequestBody Curriculum curriculum){
         curriculumServicio.actualizarCurriculum(curriculum);
     }
